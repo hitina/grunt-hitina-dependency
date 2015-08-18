@@ -1,0 +1,38 @@
+{
+  "name": "grunt-hitina-dependency",
+  "description": "For hitina spark platform",
+  "version": "0.0.1",
+  "homepage": "https://github.com/hitina/grunt-hitina-dependency",
+  "author": {
+    "name": "hu-bo",
+    "email": "hu-bo@neusoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitina/grunt-hitina-dependency"
+  },
+  "bugs": {
+    "url": "https://github.com/hitina/grunt-hitina-dependency/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/hitina/grunt-hitina-dependency/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "hitina"
+  ]
+}
