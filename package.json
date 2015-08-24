@@ -1,7 +1,7 @@
 {
   "name": "grunt-hitina-dependency",
   "description": "For hitina spark platform",
-  "version": "0.0.2-alpha",
+  "version": "0.0.3-alpha",
   "homepage": "https://github.com/hitina/grunt-hitina-dependency",
   "author": {
     "name": "hu-bo",
