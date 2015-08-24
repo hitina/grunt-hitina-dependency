@@ -1,7 +1,7 @@
 {
   "name": "grunt-hitina-dependency",
   "description": "For hitina spark platform",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha",
   "homepage": "https://github.com/hitina/grunt-hitina-dependency",
   "author": {
     "name": "hu-bo",
@@ -27,7 +27,8 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "~0.4.5"
+    "grunt": "~0.4.5",
+    "html-minifier":"~0.7.2"
   },
   "peerDependencies": {
     "grunt": "~0.4.5"

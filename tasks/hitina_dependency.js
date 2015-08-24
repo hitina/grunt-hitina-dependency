@@ -27,9 +27,12 @@ module.exports = function (grunt) {
                 _dependencies = dependency["dependencies"],
                 template = dependency["template"],
                 src = dependency["src"],
-                index = queue.indexOf(name);
+                index = queue.indexOf(name),
+                minify = require('html-minifier').minify;
             if (template && template.length > 0 && file.isFile(template)) {
-                templates[name] = file.read(template);
+                templates[name] = minify(file.read(template), {
+                    collapseWhitespace: true
+                });
             }
             if (src && src.length > 0 && file.isFile(src)) {
                 sources[name] = src;
@@ -59,14 +62,14 @@ module.exports = function (grunt) {
         var content = parse.apply(grunt, [templates]);
         file.write("dest/template.js", content && content.length > 0 ? content.toString() : "");
 
-        var _sources = ["dest/template.js"];
+        var _sources = [];
         for (var i = 0; i < queue.length; i++) {
             var source = sources[queue[i]];
             if (source && source.length > 0) {
                 _sources.push(source);
             }
         }
-
+        _sources.push("dest/template.js");
         var concatConfig = grunt.config.get("concat");
         if (concatConfig && concatConfig.dist) {
             concatConfig.dist.src = _sources
